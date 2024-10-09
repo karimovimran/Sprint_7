@@ -20,6 +20,7 @@ public class OrderPhase {
     @Step("Создание заказа")
     public ValidatableResponse successOrderCreate(OrderData orderInfo) {
         return requestSpecification()
+                .body(orderInfo)
                 .when()
                 .post(POST_ORDER_CREATE)
                 .then();

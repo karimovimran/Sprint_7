@@ -10,13 +10,7 @@ import static org.apache.http.HttpStatus.*;
 
 
 public class AddCourier {
-    @Step("Успешное создание курьера")
-    public void createCourier200Ok(ValidatableResponse response) {
-        response
-                .assertThat()
-                .statusCode(SC_CREATED)
-                .body("ok", is(true));
-    }
+
 
     @Step("Ошибка при создании двух одинаковых курьеров")
     public void createIdenteficLoginCouriers(ValidatableResponse response) {
